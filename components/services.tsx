@@ -1,129 +1,260 @@
 "use client";
 
 import Image from "next/image";
+import { Card, CardContent } from "@/components/ui/card";
 
 const services = [
-    {
-        title: "UI UX Design",
-        description: "Human-centered, visually striking, and purposeful interfaces.",
-        tags: ["User Research", "Wireframing", "Prototyping", "Visual Design"],
-        img: "/card_img1.png",
-    },
-    {
-        title: "Development",
-        description: "High-performance web and mobile applications, built for growth.",
-        tags: ["Web Development", "Mobile Apps", "Frontend & Backend", "API Integration"],
-        img: "/card_img2.png",
-    },
-    {
-        title: "Employee Outsourcing",
-        description: "Hire global tech talent — flexible, skilled, and ready to scale.",
-        tags: ["Dedicated Staff Outsourcing", "Technical Consulting", "Maintenance & Support", "Strategic Planning", "Quality Assurance & Testing", "Digital Transformation"],
-        img: "/card_img3.png",
-    },
+  {
+    title: "UI UX Design",
+    description:
+      "Human-centered, visually striking, and purposeful interfaces.",
+    img: "/card_img1.png",
+    tags: ["Wireframing", "Prototyping", "Usability Testing", "Visual Design", "Design Systems", "Iconography", "Micro-Interactions"]
+  },
+  {
+    title: "Development",
+    description:
+      "High-performance web and mobile applications, built for growth.",
+    img: "/card_img2.png",
+    tags: ["Web Development", "Mobile Apps", "Frontend & Backend", "API Integration"]
+  },
+  {
+    title: "Employee Outsourcing",
+    description:
+      "Hire global tech talent — flexible, skilled, and ready to scale.",
+    img: "/card_img3.png",
+    tags: ["Dedicated Staff Outsourcing", "Technical Consulting", "Maintenance & Support", "Strategic Planning", "Quality Assurance & Testing", "Digital Transformation"]
+  },
 ];
 
 export default function Services() {
-    return (
-        <section className="py-16 bg-gray-50">
-            <div className="container mx-auto px-4 sm:px-6">
-                <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 text-gray-900">
-                    Our Services
-                </h2>
+  return (
+    <section className="w-full bg-white py-8 sm:py-12 lg:py-16 xl:py-20">
+      <div className="max-w-7xl mw-1360 px-6 sm:px-6 lg:px-8">
+        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-center text-gray-900 mb-8 sm:mb-12 lg:mb-16">
+          Our Services
+        </h2>
 
-                <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 max-w-7xl mx-auto">
-                    {services.map((service, index) => (
-                        <div
-                            key={index}
-                            className="group relative overflow-hidden rounded-2xl bg-black text-white shadow-2xl border border-gray-800 hover:border-purple-500/50 transition-all duration-500 hover:-translate-y-2 min-h-[400px]"
-                        >
-                            {/* Purple gradient background effect */}
-                            <div className="absolute inset-0 bg-gradient-to-br from-purple-600/20 via-blue-600/10 to-transparent opacity-60 group-hover:opacity-100 transition-opacity duration-500" />
-                            
-                            {/* Animated purple glow */}
-                            <div className="absolute inset-0 bg-gradient-to-br from-purple-500/30 via-blue-500/20 to-transparent opacity-0 group-hover:opacity-70 blur-xl transition-all duration-700" />
+        {/* Desktop Layout */}
+        <div className="hidden lg:flex items-end justify-center gap-6 xl:gap-10">
+          <div className="mb-[60px]">
+            <ServiceCard {...services[0]} isFirst />
+          </div>
+          <ServiceCard {...services[1]} center isSecond />
+          <div className="mb-[60px]">
+            <ServiceCard {...services[2]} large />
+          </div>
+        </div>
 
-                            {/* Default state - Image visible */}
-                            <div className="absolute inset-0 p-8 flex flex-col justify-between group-hover:opacity-0 group-hover:pointer-events-none transition-all duration-500">
-                                {/* Header */}
-                                <div>
-                                    <h3 className="text-2xl font-bold mb-4">
-                                        {service.title}
-                                    </h3>
-                                    <p className="text-gray-300 text-base leading-relaxed">
-                                        {service.description}
-                                    </p>
-                                </div>
+        {/* Tablet Layout */}
+        <div className="hidden md:grid lg:hidden grid-cols-2 gap-6 place-items-center">
+          <ServiceCard {...services[0]} isFirst />
+          <ServiceCard {...services[1]} center isSecond />
+          <div className="col-span-2 flex justify-center">
+            <ServiceCard {...services[2]} large />
+          </div>
+        </div>
 
-                                {/* Image */}
-                                <div className="relative flex-1 flex items-center justify-center mt-8">
-                                    <Image
-                                        src={service.img}
-                                        alt={service.title}
-                                        width={300}
-                                        height={200}
-                                        className="w-full h-full object-contain max-h-48"
-                                    />
-                                </div>
+        {/* Mobile Layout */}
+        <div className="flex flex-col md:hidden gap-6 items-center px-4">
+          <ServiceCard {...services[0]} isFirst />
+          <ServiceCard {...services[1]} center isSecond />
+          <ServiceCard {...services[2]} large />
+        </div>
+      </div>
+    </section>
+  );
+}
 
-                                {/* Arrow */}
-                                <div className="absolute bottom-6 right-6 w-8 h-8 flex items-center justify-center">
-                                    <svg 
-                                        className="w-6 h-6 text-white" 
-                                        fill="none" 
-                                        stroke="currentColor" 
-                                        viewBox="0 0 24 24"
-                                    >
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 17L17 7M17 7H7M17 7V17" />
-                                    </svg>
-                                </div>
-                            </div>
+/* ---------------- SHADCN CARD ---------------- */
 
-                            {/* Hover state - Service tags visible */}
-                            <div className="absolute inset-0 p-8 flex flex-col justify-between opacity-0 group-hover:opacity-100 transition-all duration-500">
-                                {/* Header */}
-                                <div>
-                                    <h3 className="text-2xl font-bold mb-4">
-                                        {service.title}
-                                    </h3>
-                                    <p className="text-gray-300 text-base leading-relaxed mb-6">
-                                        {service.description}
-                                    </p>
-                                </div>
+function ServiceCard({
+  title,
+  description,
+  img,
+  tags,
+  center = false,
+  large = false,
+  isFirst = false,
+  isSecond = false,
+}: {
+  title: string;
+  description: string;
+  img: string;
+  tags: string[];
+  center?: boolean;
+  large?: boolean;
+  isFirst?: boolean;
+  isSecond?: boolean;
+}) {
+  return (
+    <Card className="group relative w-[calc(100vw-48px)] max-w-[320px] sm:w-[300px] lg:w-[320px] h-[350px] sm:h-[380px] lg:h-[400px] rounded-[20px] sm:rounded-[24px] lg:rounded-[28px] bg-black overflow-hidden border-none shadow-2xl cursor-pointer" style={{perspective: '1000px'}}>
+      {/* Purple gradient background image */}
+      <div className="absolute inset-0">
+        <Image
+          src="/card_img.png"
+          alt="Purple gradient background"
+          fill
+          className="object-cover opacity-80 scale-110"
+          priority
+        />
+      </div>
 
-                                {/* Service Tags */}
-                                <div className="flex-1 flex flex-col justify-center">
-                                    <div className="flex flex-wrap gap-3">
-                                        {service.tags.map((tag, tagIndex) => (
-                                            <span
-                                                key={tagIndex}
-                                                className="px-4 py-2 bg-gray-800/80 backdrop-blur-sm rounded-lg text-sm font-medium border border-purple-500/30 bg-purple-900/20 transition-all duration-300"
-                                            >
-                                                {tag}
-                                            </span>
-                                        ))}
-                                    </div>
-                                </div>
+      {/* Default Content */}
+      <CardContent className="absolute inset-0 z-10 p-0 h-full flex flex-col transition-transform duration-2000 ease-in-out group-hover:-translate-x-full">
+        {/* Text */}
+        <div className="mb-4 sm:mb-6 px-4 sm:px-6 pt-4 sm:pt-6">
+          <h3 className="text-lg sm:text-xl font-semibold text-white mb-2">
+            {title}
+          </h3>
+          <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">
+            {description}
+          </p>
+        </div>
 
-                                {/* Arrow */}
-                                <div className="absolute bottom-6 right-6 w-8 h-8 flex items-center justify-center">
-                                    <svg 
-                                        className="w-6 h-6 text-white translate-x-1 -translate-y-1" 
-                                        fill="none" 
-                                        stroke="currentColor" 
-                                        viewBox="0 0 24 24"
-                                    >
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 17L17 7M17 7H7M17 7V17" />
-                                    </svg>
-                                </div>
-                            </div>
+        {/* Image - responsive sizing */}
+        <div
+          className={`flex-1 flex items-end ${isFirst ? "pb-1 sm:pb-2" : "pb-4 sm:pb-6"} ${
+            center ? "justify-center" : "justify-start"
+          }`}
+        >
+          <div
+            className={`relative ${
+              large 
+                ? "w-60 h-44 sm:w-72 sm:h-52 lg:w-80 lg:h-60" 
+                : isFirst || isSecond 
+                ? "w-60 h-44 sm:w-72 sm:h-52 lg:w-80 lg:h-60" 
+                : "w-56 h-40 sm:w-64 sm:h-46 lg:w-72 lg:h-52"
+            }`}
+          >
+            <Image
+              src={img}
+              alt={title}
+              fill
+              className={`object-contain ${
+                center ? "object-center-bottom" : "object-left-bottom"
+              }`}
+            />
+          </div>
+        </div>
 
-                            {/* Border glow effect */}
-                            <div className="absolute inset-0 rounded-2xl border border-transparent bg-gradient-to-r from-purple-500/20 via-blue-500/20 to-purple-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
-                        </div>
-                    ))}
+        {/* Arrow - responsive sizing */}
+        <div className="absolute bottom-4 right-4 sm:bottom-6 sm:right-6">
+          <svg 
+            width="20" 
+            height="20" 
+            viewBox="0 0 24 24" 
+            fill="none" 
+            className="text-white sm:w-6 sm:h-6"
+          >
+            <path 
+              d="M7 17L17 7M17 7H7M17 7V17" 
+              stroke="currentColor" 
+              strokeWidth="2" 
+              strokeLinecap="round" 
+              strokeLinejoin="round"
+            />
+          </svg>
+        </div>
+      </CardContent>
+
+      {/* Hover Content */}
+      <CardContent className="absolute inset-0 z-10 p-0 h-full flex flex-col transition-transform duration-2000 ease-in-out translate-x-full group-hover:translate-x-0">
+        {/* Text */}
+        <div className="mb-6 px-4 sm:px-6 pt-4 sm:pt-6">
+          <h3 className="text-lg sm:text-xl font-semibold text-white mb-2">
+            {title}
+          </h3>
+          <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">
+            {description}
+          </p>
+        </div>
+
+        {/* Service Tags */}
+        <div className="flex-1 px-4 sm:px-6 pb-16">
+          {/* UI UX Design - Mixed Layout */}
+          {isFirst && (
+            <div className="space-y-2">
+              <div className="grid grid-cols-2 gap-2">
+                <div className="rounded-sm px-3 py-1.5 text-xs text-white hover:backdrop-blur-md transition-all duration-200" style={{backdropFilter: 'blur(4px)', backgroundColor: '#FFFFFF26', border: '1px solid #FFFFFF26'}}>
+                  {tags[0]}
                 </div>
+                <div className="rounded-sm px-3 py-1.5 text-xs text-white hover:backdrop-blur-md transition-all duration-200" style={{backdropFilter: 'blur(4px)', backgroundColor: '#FFFFFF26', border: '1px solid #FFFFFF26'}}>
+                  {tags[1]}
+                </div>
+              </div>
+              <div className="grid grid-cols-2 gap-2">
+                <div className="rounded-sm px-3 py-1.5 text-xs text-white hover:backdrop-blur-md transition-all duration-200" style={{backdropFilter: 'blur(4px)', backgroundColor: '#FFFFFF26', border: '1px solid #FFFFFF26'}}>
+                  {tags[2]}
+                </div>
+                <div className="rounded-sm px-3 py-1.5 text-xs text-white hover:backdrop-blur-md transition-all duration-200" style={{backdropFilter: 'blur(4px)', backgroundColor: '#FFFFFF26', border: '1px solid #FFFFFF26'}}>
+                  {tags[3]}
+                </div>
+              </div>
+              <div className="grid grid-cols-2 gap-2">
+                <div className="rounded-sm px-3 py-1.5 text-xs text-white hover:backdrop-blur-md transition-all duration-200" style={{backdropFilter: 'blur(4px)', backgroundColor: '#FFFFFF26', border: '1px solid #FFFFFF26'}}>
+                  {tags[4]}
+                </div>
+                <div className="rounded-sm px-3 py-1.5 text-xs text-white hover:backdrop-blur-md transition-all duration-200" style={{backdropFilter: 'blur(4px)', backgroundColor: '#FFFFFF26', border: '1px solid #FFFFFF26'}}>
+                  {tags[5]}
+                </div>
+              </div>
+              <div className=" rounded-sm px-3 py-1.5 text-xs text-white hover:backdrop-blur-md transition-all duration-200" style={{backdropFilter: 'blur(4px)', backgroundColor: '#FFFFFF26', border: '1px solid #FFFFFF26'}}>
+                {tags[6]}
+              </div>
             </div>
-        </section>
-    );
+          )}
+
+          {/* Development - 2x2 Grid */}
+          {isSecond && (
+            <div className="grid grid-cols-2 gap-3">
+              {tags.map((tag, index) => (
+                <div
+                  key={index}
+                  className="rounded-sm px-3 py-1.5 text-xs text-white hover:backdrop-blur-md transition-all duration-200"
+                  style={{backdropFilter: 'blur(4px)', backgroundColor: '#FFFFFF26', border: '1px solid #FFFFFF26'}}
+                >
+                  {tag}
+                </div>
+              ))}
+            </div>
+          )}
+
+          {/* Employee Outsourcing - Single Column */}
+          {!isFirst && !isSecond && (
+            <div className="space-y-2">
+              {tags.map((tag, index) => (
+                <div
+                  key={index}
+                  className="rounded-sm px-3 py-1.5 text-xs text-white hover:backdrop-blur-md transition-all duration-200"
+                  style={{backdropFilter: 'blur(4px)', backgroundColor: '#FFFFFF26', border: '1px solid #FFFFFF26'}}
+                >
+                  {tag}
+                </div>
+              ))}
+            </div>
+          )}
+        </div>
+
+        {/* Arrow - responsive sizing */}
+        <div className="absolute bottom-4 right-4 sm:bottom-6 sm:right-6">
+          <svg 
+            width="20" 
+            height="20" 
+            viewBox="0 0 24 24" 
+            fill="none" 
+            className="text-white sm:w-6 sm:h-6"
+          >
+            <path 
+              d="M7 17L17 7M17 7H7M17 7V17" 
+              stroke="currentColor" 
+              strokeWidth="2" 
+              strokeLinecap="round" 
+              strokeLinejoin="round"
+            />
+          </svg>
+        </div>
+      </CardContent>
+    </Card>
+  );
 }

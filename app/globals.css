@@ -147,3 +147,9 @@
 .animate-scroll {
   animation: scroll 25s linear infinite;
 }
+
+.mw-1360{
+  width: 100%;
+  max-width: 1360px;
+  margin: 0 auto;
+}

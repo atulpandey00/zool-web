@@ -16,7 +16,7 @@ export default function Navbar() {
 
     return (
         <header className="fixed top-0 left-0 w-full z-40 bg-white border-b border-gray-100">
-            <nav className="container mx-auto flex items-center justify-between px-6 py-5 lg:px-12">
+            <nav className="container mw-1360 flex items-center justify-between px-6 py-5 lg:px-12">
                 {/* Logo */}
                 <Link
                     href="/"
@@ -64,7 +64,6 @@ export default function Navbar() {
                     className="lg:hidden flex flex-col gap-1 text-black"
                     aria-label="Open menu"
                 >
-                    <span className="w-6 h-0.5 bg-current" />
                     <span className="w-6 h-0.5 bg-current" />
                     <span className="w-6 h-0.5 bg-current" />
                 </button>

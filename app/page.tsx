@@ -11,7 +11,7 @@ export default function Home() {
       <Trusted />
       <Services />
       <Works />
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }

@@ -1,40 +1,63 @@
 import Image from "next/image";
 
 const works = [
-    {
-        img: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=800&h=500&fit=crop&crop=center",
-        title: "Qwixis – Medical & Health App",
-        desc: "A modern medical application designed to streamline communication between patients and healthcare providers.",
-    },
-    {
-        img: "https://images.unsplash.com/photo-1586953208448-b95a79798f07?w=800&h=500&fit=crop&crop=center",
-        title: "At Right Angle – Magazine Website Design",
-        desc: "A professional magazine-style layout with high readability and engaging visual design.",
-    },
-    {
-        img: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&h=500&fit=crop&crop=center",
-        title: "Laze Fitness – Gym Website / Platform Design",
-        desc: "A clean and energetic fitness website built to improve user motivation and brand identity.",
-    },
-    {
-        img: "https://images.unsplash.com/photo-1551434678-e076c223a692?w=800&h=500&fit=crop&crop=center",
-        title: "NYFIT – Employee Wellness Platform",
-        desc: "A wellness platform crafted to support employees' mental and physical health.",
-    },
+  {
+    id: 1,
+    title: "Gemini",
+    subtitle: "Website & Mobile App",
+    description: "Lorem ipsum dolor sit amet consectetur. Ut cursus porta augue mauris ut lorem mauris dolor lorem.",
+    image: "/work-gemini.png",
+    category: "Web Development"
+  },
+  {
+    id: 2,
+    title: "At Right Angle",
+    subtitle: "Magazine Website design",
+    description: "Lorem ipsum dolor sit amet consectetur. Ut cursus porta augue mauris ut lorem mauris dolor lorem.",
+    image: "/work-right-angle.jpg",
+    category: "Web Design"
+  },
+  {
+    id: 3,
+    title: "Azim Premji Foundation",
+    subtitle: "Educational Web Platform",
+    description: "Lorem ipsum dolor sit amet consectetur. Ut cursus porta augue mauris ut lorem mauris dolor lorem.",
+    image: "/work-Azim-premji.jpg",
+    category: "Web Platform"
+  },
+  {
+    id: 4,
+    title: "NYWF",
+    subtitle: "Donation & Impact Website",
+    description: "Lorem ipsum dolor sit amet consectetur. Ut cursus porta augue mauris ut lorem mauris dolor lorem.",
+    image: "/work-nywf.jpg",
+    category: "Web Development"
+  }
 ];
 
 export default function Works() {
     return (
-        <section className="py-8 sm:py-12 md:py-16 bg-[#f3f3f3]">
-            <div className="container mx-auto px-4 sm:px-6">
+        <section 
+            className="bg-[#f3f3f3]" 
+            style={{
+                width: '1920px',
+                height: '3549px',
+                paddingTop: '80px',
+                paddingBottom: '80px',
+                paddingLeft: '280px',
+                paddingRight: '280px',
+                opacity: 1
+            }}
+        >
+            <div className="w-full h-full">
 
                 {/* Title */}
-                <h2 className="text-3xl md:text-4xl font-bold text-center mb-8 sm:mb-10">
+                <h2 className="text-3xl md:text-4xl font-bold text-center mb-10">
                     Our Works
                 </h2>
 
                 {/* Work Cards */}
-                <div className="flex flex-col gap-6 sm:gap-8">
+                <div className="flex flex-col" style={{ gap: '40px' }}>
 
                     {works.map((work, i) => (
                         <div
@@ -44,7 +67,7 @@ export default function Works() {
                             {/* Image */}
                             <div className="w-full aspect-video sm:aspect-[16/10] overflow-hidden">
                                 <Image
-                                    src={work.img}
+                                    src={work.image}
                                     alt={work.title}
                                     width={800}
                                     height={500}
@@ -55,9 +78,10 @@ export default function Works() {
                             {/* Content */}
                             <div className="p-4 sm:p-6">
                                 <h3 className="text-lg sm:text-xl font-semibold">{work.title}</h3>
+                                <p className="text-gray-500 text-sm sm:text-base">{work.subtitle}</p>
 
                                 <p className="text-gray-600 text-sm sm:text-base mt-2">
-                                    {work.desc}
+                                    {work.description}
                                 </p>
 
                                 {/* Button */}
@@ -71,7 +95,7 @@ export default function Works() {
                 </div>
 
                 {/* VIEW MORE BUTTON */}
-                <div className="text-center mt-8 sm:mt-10">
+                <div className="text-center mt-10">
                     <button className="px-6 py-2 border border-gray-400 rounded-full hover:bg-gray-100 transition">
                         View More →
                     </button>
