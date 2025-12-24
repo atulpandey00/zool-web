@@ -2,7 +2,7 @@ export default function Footer() {
     return (
         <footer className="relative w-full bg-white">
             {/* Mobile Layout */}
-            <div className="block md:hidden w-full max-w-[430px] h-[350px] mx-auto px-4 pt-10 pb-20 relative overflow-hidden">
+            <div className="block md:hidden w-full max-w-[430px] h-[300px] mx-auto px-4 pt-8 pb-12 relative overflow-hidden">
                 
                 {/* Curved Light Background Image */}
                 <img
@@ -76,10 +76,10 @@ export default function Footer() {
                 style={{
                     width: '100%',
                     maxWidth: '1920px',
-                    height: '259px',
-                    paddingTop: '80px',
+                    height: '200px',
+                    paddingTop: '40px',
                     paddingRight: '280px',
-                    paddingBottom: '80px',
+                    paddingBottom: '40px',
                     paddingLeft: '280px',
                     margin: '0 auto'
                 }}

@@ -10,7 +10,7 @@ const processSteps = [
 
 export default function Process() {
     return (
-        <section className="relative w-full min-h-screen overflow-hidden flex items-center justify-center py-16 md:py-20 lg:py-24 bg-green">
+        <section className="relative w-full overflow-hidden flex items-center justify-center py-8 md:py-16 lg:py-20 bg-green">
             {/* Mobile Diamond Background */}
             <div className="absolute inset-0 md:hidden flex flex-col items-center justify-center z-0">
                 <Diamond className="absolute top-[400px] left-1/2 -translate-x-1/2 translate-y- opacity-30 scale-200" />
@@ -18,7 +18,7 @@ export default function Process() {
             </div>
 
             {/* Content Container */}
-            <div className="relative z-10 w-full max-w-[350px] md:max-w-7xl mw-1360 px-4 md:px-6 lg:px-8 py-16 md:py-0 flex flex-col items-center justify-center min-h-[1241px] md:min-h-0">
+            <div className="relative z-10 w-full max-w-[350px] md:max-w-7xl mw-1360 px-4 md:px-6 lg:px-8 py-8 md:py-0 flex flex-col items-center justify-center md:min-h-0">
 
                 {/* Title */}
                 <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-800 mb-8 md:mb-12 lg:mb-16 text-center">
@@ -70,7 +70,7 @@ export default function Process() {
                 </div>
 
                 {/* Mobile Layout (sm and below) */}
-                <div className="block md:hidden w-full space-y-6  z-20">
+                <div className="block md:hidden w-full space-y-4 z-20">
                     {processSteps.map((step) => (
                         <div
                             key={step.id}

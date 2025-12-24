@@ -1,8 +1,8 @@
 const CTASection = () => {
   return (
-    <section className="relative w-full py-16 md:py-20 lg:py-24">
+    <section className="relative w-full py-8 md:py-12 lg:py-16">
       {/* Mobile Layout */}
-      <div className="block md:hidden w-full max-w-[430px] h-[505px] mx-auto px-4 py-32 flex flex-col items-center justify-center text-center">
+      <div className="block md:hidden w-full max-w-[430px] h-[400px] mx-auto px-4 py-16 flex flex-col items-center justify-center text-center">
         <h2 className="text-2xl font-bold text-gray-800 mb-4 leading-tight">
           Let's Build the Future, Together.
         </h2>

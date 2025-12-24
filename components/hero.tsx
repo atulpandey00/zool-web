@@ -74,7 +74,7 @@ export default function Hero() {
             <div className="lg:hidden flex flex-col min-h-screen pt-16 sm:pt-20 px-4 sm:px-6">
                 {/* Mobile Header */}
                 <div className="text-center mb-8 mt-2">
-                    <h1 className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl font-bold leading-tight text-black mb-2">
+                    <h1 className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl font-bold leading-tight text-black mt-6 mb-2">
                         WE DESIGN.
                     </h1>
 
@@ -95,7 +95,7 @@ export default function Hero() {
                             alt="AI Design Face"
                             fill
                             priority
-                            className="object-contain drop-shadow-2xl scale-150 sm:scale-[1.3] md:scale-[1.4]"
+                            className="object-contain drop-shadow-2xl scale-180 sm:scale-[1.3] md:scale-[1.4]"
                             sizes="(max-width: 640px) 90vw, (max-width: 768px) 80vw, 70vw"
                         />
                     </div>
