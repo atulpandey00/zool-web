@@ -10,7 +10,7 @@ const processSteps = [
 
 export default function Process() {
     return (
-        <section className="relative w-full min-h-screen overflow-hidden flex items-center justify-center py-16 md:py-16 lg:py-20 bg-white">
+        <section className="relative w-full min-h-screen overflow-hidden flex items-center justify-center py-16 md:py-20 lg:py-24 bg-green">
             {/* Mobile Diamond Background */}
             <div className="absolute inset-0 md:hidden flex flex-col items-center justify-center z-0">
                 <Diamond className="absolute top-[400px] left-1/2 -translate-x-1/2 translate-y- opacity-30 scale-200" />

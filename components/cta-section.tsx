@@ -1,6 +1,6 @@
 const CTASection = () => {
   return (
-    <section className="relative w-full">
+    <section className="relative w-full py-16 md:py-20 lg:py-24">
       {/* Mobile Layout */}
       <div className="block md:hidden w-full max-w-[430px] h-[505px] mx-auto px-4 py-32 flex flex-col items-center justify-center text-center">
         <h2 className="text-2xl font-bold text-gray-800 mb-4 leading-tight">

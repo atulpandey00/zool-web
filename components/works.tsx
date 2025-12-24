@@ -37,7 +37,7 @@ const works = [
 
 export default function Works() {
     return (
-        <section className="py-16 md:py-20">
+        <section className="py-16 md:py-20 lg:py-24" style={{ minHeight: '3192px' }}>
             <div className="max-w-[1360px] mw-1360 px-4 md:px-6 lg:px-20">
                 {/* Title */}
                 <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-center mb-8 md:mb-10">
@@ -45,36 +45,27 @@ export default function Works() {
                 </h2>
 
                 {/* Work Cards */}
-                <div className="flex flex-col gap-8 md:gap-16 lg:gap-20">
+                <div className="flex flex-col gap-[10px] md:gap-16 xl:gap-16 xl:w-[1200px] xl:mx-auto">
                     {works.map((work, i) => (
                         <div
                             key={i}
-                            className="sticky top-[80px] md:top-[120px] w-full max-w-[398px] h-[500px] mx-auto md:max-w-none md:h-auto mb-4 md:mb-8"
+                            className="sticky top-[60px] sm:top-[80px] md:top-[100px] lg:top-[120px] w-full max-w-[398px] sm:max-w-[380px] md:max-w-[450px] lg:max-w-[500px] xl:w-[1200px] xl:max-w-[1200px] h-[500px] sm:h-[450px] md:h-[500px] lg:h-[550px] xl:h-[600px] mx-auto mb-4 sm:mb-6 md:mb-8 lg:mb-10"
                         >
                             {/* Image */}
-                            <div className="w-full h-full overflow-hidden rounded-2xl relative">
+                            <div className="w-full h-full overflow-hidden relative" style={{ borderRadius: '16px' }}>
                                 <Image
                                     src={work.image}
                                     alt={work.title}
                                     width={1200}
                                     height={750}
-                                    className="w-full h-full object-cover object-center md:-translate-y-25 transition-transform duration-500"
-                                    style={{
-                                        width: 1200,
-                                        height: 750,
-                                        gap: '10px',
-                                        transform: 'rotate(0deg)',
-                                        opacity: 1,
-                                        borderRadius: '16px'
-                                    }}
+                                    className="w-full h-full object-cover object-center transition-transform duration-500 -translate-y-8 md:-translate-y-12 lg:-translate-y-30"
+                                    style={{ borderRadius: '16px' }}
                                 />
 
                                 {/* Arrow Button - Top Right */}
-                                <button
-                                    className=" absolute top-4 right-4 w-11 h-11 rounded-full bg-white flex items-center justify-center shadow-md hover:shadow-lg  transition z-10"
-                                >
+                                <button className="absolute top-3 right-3 sm:top-4 sm:right-4 w-8 h-8 sm:w-10 sm:h-10 md:w-11 md:h-11 rounded-full bg-white flex items-center justify-center shadow-md hover:shadow-lg transition z-10">
                                     <svg
-                                        className="w-5 h-5 text-gray-600"
+                                        className="w-4 h-4 sm:w-5 sm:h-5 text-gray-600"
                                         fill="none"
                                         stroke="currentColor"
                                         viewBox="0 0 24 24"
@@ -91,25 +82,20 @@ export default function Works() {
                             </div>
 
                             {/* Content Overlay */}
-                            <div
-                                className="absolute bottom-0 left-0 right-0 backdrop-blur-sm bg-gradient-to-t from-black/60 via-black/30 to-transparent rounded-b-2xl flex items-end"
-                                style={{
-                                    width: 1200,
-                                    height: 114.00006866455078,
-                                    gap: '16px',
-                                    transform: 'rotate(0deg)',
-                                    opacity: 1,
-                                    borderTopWidth: '1px',
-                                    padding: '24px'
-                                }}
+                            <div 
+                                className="absolute bottom-0 left-0 right-0 backdrop-blur-sm bg-gradient-to-t from-black/60 via-black/30 to-transparent flex items-end p-4 sm:p-5 md:p-6 lg:p-8 min-h-[100px] sm:min-h-[110px] md:min-h-[120px] lg:min-h-[130px]"
+                                style={{ borderBottomLeftRadius: '16px', borderBottomRightRadius: '16px' }}
                             >
-                                <div className="flex-1 min-w-0">
-                                    <h3 className="text-base md:text-xl font-semibold text-white drop-shadow-lg leading-tight">
+                                <div className="flex-1 min-w-0 w-full">
+                                    <h3 className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl font-semibold text-white drop-shadow-lg leading-tight mb-1 sm:mb-2">
                                         {work.title} – {work.subtitle}
                                     </h3>
-                                    <p className="text-gray-200 text-xs md:text-sm mt-1 md:mt-2 drop-shadow-md">
-                                        <span className="block md:hidden">
-                                            {work.description.length > 50 ? `${work.description.substring(0, 50)}...` : work.description}
+                                    <p className="text-gray-200 text-xs sm:text-sm md:text-base lg:text-lg drop-shadow-md line-clamp-2 sm:line-clamp-3">
+                                        <span className="block sm:hidden">
+                                            {work.description.length > 40 ? `${work.description.substring(0, 40)}...` : work.description}
+                                        </span>
+                                        <span className="hidden sm:block md:hidden">
+                                            {work.description.length > 60 ? `${work.description.substring(0, 60)}...` : work.description}
                                         </span>
                                         <span className="hidden md:block">
                                             {work.description}
