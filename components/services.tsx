@@ -56,7 +56,7 @@ export default function Services() {
         </div>
 
         {/* Mobile Layout */}
-        <div className="flex flex-col md:hidden gap-6 items-center px-4">
+        <div className="flex flex-col md:hidden gap-[55px] items-center px-4">
           <ServiceCard {...services[0]} isFirst />
           <ServiceCard {...services[1]} center isSecond />
           <ServiceCard {...services[2]} large />
@@ -88,7 +88,7 @@ function ServiceCard({
   isSecond?: boolean;
 }) {
   return (
-    <Card className="group relative w-[calc(100vw-48px)] max-w-[320px] sm:w-[300px] lg:w-[320px] h-[350px] sm:h-[380px] lg:h-[400px] rounded-[20px] sm:rounded-[24px] lg:rounded-[28px] bg-black overflow-hidden border-none shadow-2xl cursor-pointer" style={{perspective: '1000px'}}>
+    <Card className="group relative w-[398px] max-w-[398px] sm:w-[300px] lg:w-[320px] h-[398px] sm:h-[380px] lg:h-[400px] rounded-[20px] sm:rounded-[24px] lg:rounded-[28px] bg-black overflow-hidden border-none shadow-2xl cursor-pointer" style={{perspective: '1000px'}}>
       {/* Purple gradient background image */}
       <div className="absolute inset-0">
         <Image
@@ -121,17 +121,17 @@ function ServiceCard({
           <div
             className={`relative ${
               large 
-                ? "w-60 h-44 sm:w-72 sm:h-52 lg:w-80 lg:h-60" 
+                ? "w-80 h-60 sm:w-72 sm:h-52 lg:w-80 lg:h-60" 
                 : isFirst || isSecond 
-                ? "w-60 h-44 sm:w-72 sm:h-52 lg:w-80 lg:h-60" 
-                : "w-56 h-40 sm:w-64 sm:h-46 lg:w-72 lg:h-52"
+                ? "w-80 h-60 sm:w-72 sm:h-52 lg:w-80 lg:h-60" 
+                : "w-72 h-54 sm:w-64 sm:h-46 lg:w-72 lg:h-52"
             }`}
           >
             <Image
               src={img}
               alt={title}
               fill
-              className={`object-contain ${
+              className={`object-contain scale-110 md:scale-100 ${
                 center ? "object-center-bottom" : "object-left-bottom"
               }`}
             />
