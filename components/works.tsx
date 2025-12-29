@@ -83,7 +83,7 @@ export default function Works() {
 
                             {/* Content Overlay */}
                             <div 
-                                className="absolute bottom-0 left-0 right-0 backdrop-blur-sm bg-gradient-to-t from-black/60 via-black/30 to-transparent flex items-end p-4 sm:p-5 md:p-6 lg:p-8 min-h-[100px] sm:min-h-[110px] md:min-h-[120px] lg:min-h-[130px]"
+                                className="absolute bottom-0 left-0 right-0 backdrop-blur-sm bg-gradient-to-t from-black/60 via-black/30 to-transparent flex items-end p-4 sm:p-5 md:p-6 lg:p-8 min-h-[100px] sm:min-h-[110px] md:min-h-[120px] lg:min-h-[130px] border-t border-white"
                                 style={{ borderBottomLeftRadius: '16px', borderBottomRightRadius: '16px' }}
                             >
                                 <div className="flex-1 min-w-0 w-full">
