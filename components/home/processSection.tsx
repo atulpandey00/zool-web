@@ -10,7 +10,7 @@ const processSteps = [
 
 export default function Process() {
     return (
-        <section className="relative w-full overflow-hidden flex items-center justify-center py-8 md:py-16 lg:py-20 bg-green">
+        <section className="relative w-full overflow-hidden flex items-center justify-center py-8 md:py-16 lg:py-20 transition-colors">
             {/* Mobile Diamond Background */}
             <div className="absolute inset-0 md:hidden flex flex-col items-center justify-center z-0">
                 <Diamond className="absolute top-[400px] left-1/2 -translate-x-1/2 translate-y- opacity-30 scale-200" />
@@ -21,7 +21,7 @@ export default function Process() {
             <div className="relative z-10 w-full max-w-[350px] md:max-w-7xl mw-1360 px-4 md:px-6 lg:px-8 py-8 md:py-0 flex flex-col items-center justify-center md:min-h-0">
 
                 {/* Title */}
-                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-800 mb-8 md:mb-12 lg:mb-16 text-center">
+                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold  mb-8 md:mb-12 lg:mb-16 text-center">
                     Our Process
                 </h2>
 
@@ -115,8 +115,8 @@ function ProcessCard({ step }: { step: typeof processSteps[0] }) {
                 pb-[2px] lg:pb-[2px]
                 flex flex-col gap-2.5 lg:gap-[10px]
                 rounded-[20px]
-                border border-[#212121]
-                bg-white/10
+                border border-white
+
                 backdrop-blur-[10px]
                 shadow-[0px_4px_10px_0px_rgba(255,255,255,0.25)]
                 mx-auto
@@ -125,8 +125,8 @@ function ProcessCard({ step }: { step: typeof processSteps[0] }) {
                 <div className="
                     w-8 h-8 sm:w-10 sm:h-10
                     rounded-full
-                    bg-[#212121]
-                    text-white
+                    bg-[#212121] dark:bg-white
+                    text-white dark:text-black
                     text-sm sm:text-lg font-bold
                     flex items-center justify-center
                 ">
@@ -134,12 +134,12 @@ function ProcessCard({ step }: { step: typeof processSteps[0] }) {
                 </div>
 
                 {/* Title */}
-                <h3 className="text-lg sm:text-xl lg:text-[20px] font-bold text-[#212121] leading-tight">
+                <h3 className="text-lg sm:text-xl lg:text-[20px] font-bold text-[#212121] dark:text-white leading-tight">
                     {step.title}
                 </h3>
 
                 {/* Description */}
-                <p className="text-sm lg:text-[14px] text-[#3F3F3F] leading-[1.4]">
+                <p className="text-sm lg:text-[14px] text-[#3F3F3F] dark:text-gray-300 leading-[1.4]">
                     {step.description}
                 </p>
             </div>

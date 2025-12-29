@@ -1,11 +1,10 @@
-import Hero from "@/components/hero";
-import Services from "@/components/services";
-import Trusted from "@/components/trusted";
-import Works from "@/components/works";
-import Footer from "@/components/footer";
-import Process from "@/components/process";
-import Testimonials from "@/components/testimonials";
-import CTASection from "@/components/cta-section";
+import Hero from "@/components/home/HeroSection";
+import Services from "@/components/home/ServicesSection";
+import Trusted from "@/components/home/trustedSection";
+import Works from "@/components/home/WorksSection";
+import Process from "@/components/home/processSection";
+import Testimonials from "@/components/home/testimonials";
+import CTASection from "@/components/home/cta-section";
 
 export default function Home() {
   return (
@@ -16,8 +15,7 @@ export default function Home() {
       <Works />
       <Process />
       <Testimonials />
-      <CTASection/>
-      <Footer />
+      {/* <CTASection/> */}
     </>
   );
 }

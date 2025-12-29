@@ -45,13 +45,13 @@ const testimonials = [
 
 export default function Testimonials() {
   return (
-    <section className="relative w-full flex items-center justify-center py-8 md:py-12 lg:py-16">
+    <section className="relative w-full flex items-center justify-center py-8 md:py-12 lg:py-16 transition-colors">
       
       {/* Content Container */}
       <div className="relative z-10 w-full max-w-[430px] md:max-w-7xl mw-1360 px-4 md:px-8">
         
         {/* Title */}
-        <h2 className="text-2xl md:text-3xl lg:text-5xl font-bold text-center mb-6 md:mb-10">
+        <h2 className="text-2xl md:text-3xl lg:text-5xl font-bold text-center mb-6 md:mb-10 text-gray-900 dark:text-white">
           Our Work Speaks Through Our Clients
         </h2>
 
@@ -88,16 +88,16 @@ function TestimonialCard({ testimonial }: { testimonial: typeof testimonials[0] 
           py-8 md:py-[32px]
           flex flex-col
           rounded-[20px]
-          border border-black
+          bg-[#00000] dark:bg-gray-800/50ay-600
+          bg-[#000000] dark:bg-gray-800/50
         "
-        style={{ backgroundColor: '#AAAAAA33' }}
       >
         {/* Quotation Mark */}
-        <div className="text-4xl md:text-6xl text-gray-500 leading-none mb-4 md:mb-4 font-serif">"</div>
+        <div className="text-4xl md:text-6xl text-gray-500 dark:text-gray-400 leading-none mb-4 md:mb-4 font-serif">"</div>
         
         {/* Content */}
         <div className="flex-1 mb-6">
-          <p className="text-gray-700 text-sm md:text-base leading-relaxed">
+          <p className="text-gray-700 dark:text-gray-300 text-sm md:text-base leading-relaxed">
             {testimonial.content}
           </p>
         </div>
@@ -124,10 +124,10 @@ function TestimonialCard({ testimonial }: { testimonial: typeof testimonials[0] 
 
           {/* Name & Company */}
           <div>
-            <h4 className="text-gray-900 font-bold text-base md:text-lg">
+            <h4 className="text-gray-900 dark:text-white font-bold text-base md:text-lg">
               {testimonial.name}
             </h4>
-            <p className="text-gray-600 text-xs md:text-sm">
+            <p className="text-gray-600 dark:text-gray-400 text-xs md:text-sm">
               {testimonial.company}
             </p>
           </div>

@@ -29,9 +29,9 @@ const services = [
 
 export default function Services() {
   return (
-    <section className="w-full bg-white py-16 md:py-20 lg:py-24">
+    <section className="w-full py-16 md:py-20 lg:py-24  transition-colors">
       <div className="max-w-7xl mw-1360 px-6 sm:px-6 lg:px-8">
-        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-center text-gray-900 mb-8 sm:mb-12 lg:mb-16">
+        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-center text-gray-900 dark:text-white mb-8 sm:mb-12 lg:mb-16">
           Our Services
         </h2>
 
@@ -88,7 +88,7 @@ function ServiceCard({
   isSecond?: boolean;
 }) {
   return (
-    <Card className="group relative w-[398px] max-w-[398px] sm:w-[300px] lg:w-[320px] h-[398px] sm:h-[380px] lg:h-[400px] rounded-[20px] sm:rounded-[24px] lg:rounded-[28px] bg-black overflow-hidden border-none shadow-2xl cursor-pointer" style={{perspective: '1000px'}}>
+    <Card className="group relative w-[398px] max-w-[398px] sm:w-[300px] lg:w-[320px] h-[398px] sm:h-[380px] lg:h-[400px] rounded-[20px] sm:rounded-[24px] lg:rounded-[28px] bg-black overflow-hidden border border-white/60 shadow-2xl cursor-pointer hover:border-white/80 transition-all duration-300" style={{perspective: '1000px'}}>
       {/* Purple gradient background image */}
       <div className="absolute inset-0">
         <Image

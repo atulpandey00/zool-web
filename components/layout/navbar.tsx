@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import { ThemeToggle } from "@/components/theme-toggle";
 
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
@@ -15,12 +16,12 @@ export default function Navbar() {
     }, [isOpen]);
 
     return (
-        <header className="fixed top-0 left-0 w-full z-40 bg-white border-b border-gray-100">
+        <header className="fixed top-0 left-0 w-full z-40 bg-white dark:bg-black border-b  transition-colors">
             <nav className="container mw-1360 flex items-center justify-between px-6 py-5 lg:px-12">
                 {/* Logo */}
                 <Link
                     href="/"
-                    className="text-2xl font-bold text-black hover:text-gray-700 transition"
+                    className="text-2xl font-bold text-black dark:text-white hover:text-gray-700 dark:hover:text-gray-300 transition"
                 >
                     ZOOL
                 </Link>
@@ -31,20 +32,21 @@ export default function Navbar() {
                         <li key={item}>
                             <Link
                                 href={`#${item.toLowerCase().replace(" ", "")}`}
-                                className="text-gray-700 hover:text-black relative group transition"
+                                className="text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white relative group transition"
                             >
                                 {item}
-                                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-black transition-all group-hover:w-full" />
+                                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-black dark:bg-white transition-all group-hover:w-full" />
                             </Link>
                         </li>
                     ))}
                 </ul>
 
                 {/* Desktop CTA */}
-                <div className="hidden lg:block">
+                <div className="hidden lg:flex items-center gap-4">
+                    <ThemeToggle />
                     <Link
                         href="#contact"
-                        className="flex items-center gap-1 font-medium text-black hover:text-gray-700 transition group"
+                        className="flex items-center gap-1 font-medium text-black dark:text-white hover:text-gray-700 dark:hover:text-gray-300 transition group"
                     >
                         Let’s Talk
                         <svg
@@ -61,7 +63,7 @@ export default function Navbar() {
                 {/* Hamburger Button */}
                 <button
                     onClick={() => setIsOpen(true)}
-                    className="lg:hidden flex flex-col gap-1 text-black"
+                    className="lg:hidden flex flex-col gap-1 text-black dark:text-white"
                     aria-label="Open menu"
                 >
                     <span className="w-6 h-0.5 bg-current" />
@@ -94,6 +96,13 @@ export default function Navbar() {
                         >
                             ZOOL
                         </Link>
+                    </div>
+
+                    {/* Theme Toggle for Mobile */}
+                    <div className="flex justify-center mb-8">
+                        <div className="[&_button]:border-white [&_button]:text-white [&_button]:hover:bg-white/10">
+                            <ThemeToggle />
+                        </div>
                     </div>
 
                     {/* Mobile Menu Items */}

@@ -45,11 +45,11 @@ export default function Works() {
                 </h2>
 
                 {/* Work Cards */}
-                <div className="flex flex-col gap-4 md:gap-16 xl:gap-16 xl:w-[1200px] xl:mx-auto">
+                <div className="flex flex-col gap-4 md:gap-16 xl:gap-16 xl:w-[1200px] xl:mw-1360">
                     {works.map((work, i) => (
                         <div
                             key={i}
-                            className="sticky top-[60px] sm:top-[80px] md:top-[100px] lg:top-[120px] w-full max-w-[398px] sm:max-w-[380px] md:max-w-[450px] lg:max-w-[500px] xl:w-[1200px] xl:max-w-[1200px] h-[400px] sm:h-[420px] md:h-[500px] lg:h-[550px] xl:h-[600px] mx-auto mb-2 sm:mb-4 md:mb-8 lg:mb-10"
+                            className="sticky top-[60px] sm:top-[80px] md:top-[100px] lg:top-[120px] w-full max-w-[398px] sm:max-w-[380px] md:max-w-[450px] lg:max-w-[500px] xl:w-[1200px] xl:max-w-[1200px] h-[400px] sm:h-[420px] md:h-[500px] lg:h-[550px] xl:h-[750px] mx-auto mb-2 sm:mb-4 md:mb-8 lg:mb-10"
                         >
                             {/* Image */}
                             <div className="w-full h-full overflow-hidden relative" style={{ borderRadius: '16px' }}>
