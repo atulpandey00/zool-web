@@ -115,7 +115,7 @@ function ProcessCard({ step }: { step: typeof processSteps[0] }) {
                 pb-[2px] lg:pb-[2px]
                 flex flex-col gap-2.5 lg:gap-[10px]
                 rounded-[20px]
-                border border-white
+                border border-gray-500 dark:border-white
 
                 backdrop-blur-[10px]
                 shadow-[0px_4px_10px_0px_rgba(255,255,255,0.25)]

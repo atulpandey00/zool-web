@@ -88,8 +88,7 @@ function TestimonialCard({ testimonial }: { testimonial: typeof testimonials[0] 
           py-8 md:py-[32px]
           flex flex-col
           rounded-[20px]
-          bg-[#00000] dark:bg-gray-800/50ay-600
-          bg-[#000000] dark:bg-gray-800/50
+          bg-[#AAAAAA33] dark:bg-gray-800/50
         "
       >
         {/* Quotation Mark */}
