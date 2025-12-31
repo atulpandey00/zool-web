@@ -87,7 +87,7 @@ export default function Footer() {
                 }}
             >
                 {/* Footer Background Image - Only in Dark Theme */}
-                <img
+                {/* <img
                     src="/footer.png"
                     alt=""
                     className="absolute left-1/2 bottom-0 pointer-events-none hidden dark:block"
@@ -98,7 +98,7 @@ export default function Footer() {
                         opacity: 1
                     }}
                 />
-                
+                 */}
                 <div className="flex justify-between items-start h-full relative z-10" style={{ gap: '40px' }}>
                     {/* Left side - Logo and Copyright */}
                     <div className="flex flex-col justify-between h-full">

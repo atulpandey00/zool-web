@@ -176,30 +176,30 @@ function ServiceCard({
           {isFirst && (
             <div className="space-y-2">
               <div className="grid grid-cols-2 gap-2">
-                <div className="rounded-sm px-3 py-1.5 text-xs text-white hover:backdrop-blur-md transition-all duration-200" style={{backdropFilter: 'blur(4px)', backgroundColor: '#FFFFFF26', border: '1px solid #FFFFFF26'}}>
+                <div className="w-[322px] h-[37px] rounded-lg px-3 py-1.5 text-xs text-white hover:backdrop-blur-md transition-all duration-200 flex items-center justify-center" style={{backdropFilter: 'blur(4px)', backgroundColor: '#FFFFFF26', border: '1px solid #FFFFFF26', gap: '10px'}}>
                   {tags[0]}
                 </div>
-                <div className="rounded-sm px-3 py-1.5 text-xs text-white hover:backdrop-blur-md transition-all duration-200" style={{backdropFilter: 'blur(4px)', backgroundColor: '#FFFFFF26', border: '1px solid #FFFFFF26'}}>
+                <div className="w-[322px] h-[37px] rounded-lg px-3 py-1.5 text-xs text-white hover:backdrop-blur-md transition-all duration-200 flex items-center justify-center" style={{backdropFilter: 'blur(4px)', backgroundColor: '#FFFFFF26', border: '1px solid #FFFFFF26', gap: '10px'}}>
                   {tags[1]}
                 </div>
               </div>
               <div className="grid grid-cols-2 gap-2">
-                <div className="rounded-sm px-3 py-1.5 text-xs text-white hover:backdrop-blur-md transition-all duration-200" style={{backdropFilter: 'blur(4px)', backgroundColor: '#FFFFFF26', border: '1px solid #FFFFFF26'}}>
+                <div className="w-[322px] h-[37px] rounded-lg px-3 py-1.5 text-xs text-white hover:backdrop-blur-md transition-all duration-200 flex items-center justify-center" style={{backdropFilter: 'blur(4px)', backgroundColor: '#FFFFFF26', border: '1px solid #FFFFFF26', gap: '10px'}}>
                   {tags[2]}
                 </div>
-                <div className="rounded-sm px-3 py-1.5 text-xs text-white hover:backdrop-blur-md transition-all duration-200" style={{backdropFilter: 'blur(4px)', backgroundColor: '#FFFFFF26', border: '1px solid #FFFFFF26'}}>
+                <div className="w-[322px] h-[37px] rounded-lg px-3 py-1.5 text-xs text-white hover:backdrop-blur-md transition-all duration-200 flex items-center justify-center" style={{backdropFilter: 'blur(4px)', backgroundColor: '#FFFFFF26', border: '1px solid #FFFFFF26', gap: '10px'}}>
                   {tags[3]}
                 </div>
               </div>
               <div className="grid grid-cols-2 gap-2">
-                <div className="rounded-sm px-3 py-1.5 text-xs text-white hover:backdrop-blur-md transition-all duration-200" style={{backdropFilter: 'blur(4px)', backgroundColor: '#FFFFFF26', border: '1px solid #FFFFFF26'}}>
+                <div className="w-[322px] h-[37px] rounded-lg px-3 py-1.5 text-xs text-white hover:backdrop-blur-md transition-all duration-200 flex items-center justify-center" style={{backdropFilter: 'blur(4px)', backgroundColor: '#FFFFFF26', border: '1px solid #FFFFFF26', gap: '10px'}}>
                   {tags[4]}
                 </div>
-                <div className="rounded-sm px-3 py-1.5 text-xs text-white hover:backdrop-blur-md transition-all duration-200" style={{backdropFilter: 'blur(4px)', backgroundColor: '#FFFFFF26', border: '1px solid #FFFFFF26'}}>
+                <div className="w-[322px] h-[37px] rounded-lg px-3 py-1.5 text-xs text-white hover:backdrop-blur-md transition-all duration-200 flex items-center justify-center" style={{backdropFilter: 'blur(4px)', backgroundColor: '#FFFFFF26', border: '1px solid #FFFFFF26', gap: '10px'}}>
                   {tags[5]}
                 </div>
               </div>
-              <div className=" rounded-sm px-3 py-1.5 text-xs text-white hover:backdrop-blur-md transition-all duration-200" style={{backdropFilter: 'blur(4px)', backgroundColor: '#FFFFFF26', border: '1px solid #FFFFFF26'}}>
+              <div className="w-[322px] h-[37px] rounded-lg px-3 py-1.5 text-xs text-white hover:backdrop-blur-md transition-all duration-200 flex items-center justify-center" style={{backdropFilter: 'blur(4px)', backgroundColor: '#FFFFFF26', border: '1px solid #FFFFFF26', gap: '10px'}}>
                 {tags[6]}
               </div>
             </div>
@@ -211,8 +211,8 @@ function ServiceCard({
               {tags.map((tag, index) => (
                 <div
                   key={index}
-                  className="rounded-sm px-3 py-1.5 text-xs text-white hover:backdrop-blur-md transition-all duration-200"
-                  style={{backdropFilter: 'blur(4px)', backgroundColor: '#FFFFFF26', border: '1px solid #FFFFFF26'}}
+                  className="w-[322px] h-[37px] rounded-lg px-3 py-1.5 text-xs text-white hover:backdrop-blur-md transition-all duration-200 flex items-center justify-center"
+                  style={{backdropFilter: 'blur(4px)', backgroundColor: '#FFFFFF26', border: '1px solid #FFFFFF26', gap: '10px'}}
                 >
                   {tag}
                 </div>
@@ -226,8 +226,8 @@ function ServiceCard({
               {tags.map((tag, index) => (
                 <div
                   key={index}
-                  className="rounded-sm px-3 py-1.5 text-xs text-white hover:backdrop-blur-md transition-all duration-200"
-                  style={{backdropFilter: 'blur(4px)', backgroundColor: '#FFFFFF26', border: '1px solid #FFFFFF26'}}
+                  className="w-[322px] h-[37px] rounded-lg px-3 py-1.5 text-xs text-white hover:backdrop-blur-md transition-all duration-200 flex items-center justify-center"
+                  style={{backdropFilter: 'blur(4px)', backgroundColor: '#FFFFFF26', border: '1px solid #FFFFFF26', gap: '10px'}}
                 >
                   {tag}
                 </div>

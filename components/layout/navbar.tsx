@@ -28,24 +28,49 @@ export default function Navbar() {
 
                 {/* Desktop Menu */}
                 <ul className="hidden lg:flex items-center gap-6 text-base font-medium">
-                    {["Services", "Our Work", "Company", "Insights"].map((item) => (
-                        <li key={item}>
-                            <Link
-                                href={`#${item.toLowerCase().replace(" ", "")}`}
-                                className="text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white relative group transition"
-                            >
-                                {item}
-                                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-black dark:bg-white transition-all group-hover:w-full" />
-                            </Link>
-                        </li>
-                    ))}
+                    <li>
+                        <Link
+                            href="/services"
+                            className="text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white relative group transition"
+                        >
+                            Services
+                            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-black dark:bg-white transition-all group-hover:w-full" />
+                        </Link>
+                    </li>
+                    <li>
+                        <Link
+                            href="/works"
+                            className="text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white relative group transition"
+                        >
+                            Our Work
+                            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-black dark:bg-white transition-all group-hover:w-full" />
+                        </Link>
+                    </li>
+                    <li>
+                        <Link
+                            href="/about"
+                            className="text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white relative group transition"
+                        >
+                            Company
+                            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-black dark:bg-white transition-all group-hover:w-full" />
+                        </Link>
+                    </li>
+                    <li>
+                        <Link
+                            href="#insights"
+                            className="text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white relative group transition"
+                        >
+                            Insights
+                            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-black dark:bg-white transition-all group-hover:w-full" />
+                        </Link>
+                    </li>
                 </ul>
 
                 {/* Desktop CTA */}
                 <div className="hidden lg:flex items-center gap-4">
                     <ThemeToggle />
                     <Link
-                        href="#contact"
+                        href="/contact"
                         className="flex items-center gap-1 font-medium text-black dark:text-white hover:text-gray-700 dark:hover:text-gray-300 transition group"
                     >
                         Let’s Talk
@@ -107,30 +132,72 @@ export default function Navbar() {
 
                     {/* Mobile Menu Items */}
                     <div className=" flex flex-col px-8 space-y-8 mb-12">
-                        {["Services", "Our Work", "Company", "Insights"].map((item) => (
-                            <Link
-                                key={item}
-                                href={`#${item.toLowerCase().replace(" ", "")}`}
-                                onClick={() => setIsOpen(false)}
-                                className="flex justify-between items-center text-white text-2xl font-medium hover:text-gray-300 transition group"
+                        <Link
+                            href="/services"
+                            onClick={() => setIsOpen(false)}
+                            className="flex justify-between items-center text-white text-2xl font-medium hover:text-gray-300 transition group"
+                        >
+                            Services
+                            <svg
+                                className="w-6 h-6 transition-transform group-hover:translate-x-2"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
                             >
-                                {item}
-                                <svg
-                                    className="w-6 h-6 transition-transform group-hover:translate-x-2"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    viewBox="0 0 24 24"
-                                >
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                                </svg>
-                            </Link>
-                        ))}
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                            </svg>
+                        </Link>
+                        <Link
+                            href="/works"
+                            onClick={() => setIsOpen(false)}
+                            className="flex justify-between items-center text-white text-2xl font-medium hover:text-gray-300 transition group"
+                        >
+                            Our Work
+                            <svg
+                                className="w-6 h-6 transition-transform group-hover:translate-x-2"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                            >
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                            </svg>
+                        </Link>
+                        <Link
+                            href="/about"
+                            onClick={() => setIsOpen(false)}
+                            className="flex justify-between items-center text-white text-2xl font-medium hover:text-gray-300 transition group"
+                        >
+                            Company
+                            <svg
+                                className="w-6 h-6 transition-transform group-hover:translate-x-2"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                            >
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                            </svg>
+                        </Link>
+                        <Link
+                            href="#insights"
+                            onClick={() => setIsOpen(false)}
+                            className="flex justify-between items-center text-white text-2xl font-medium hover:text-gray-300 transition group"
+                        >
+                            Insights
+                            <svg
+                                className="w-6 h-6 transition-transform group-hover:translate-x-2"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                            >
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                            </svg>
+                        </Link>
                     </div>
 
                     {/* CTA */}
                     <div className="px-8 py-8">
                         <Link
-                            href="#contact"
+                            href="/contact"
                             onClick={() => setIsOpen(false)}
                             className="block w-full rounded-full bg-blue-600 py-4 text-center text-lg font-semibold text-white hover:bg-blue-700 transition"
                         >
