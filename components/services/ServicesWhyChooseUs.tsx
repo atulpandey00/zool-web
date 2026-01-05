@@ -1,65 +1,106 @@
 "use client";
 
+import { Truck, User, Layers, Home, Tag, Headphones } from "lucide-react";
+
 const benefits = [
   {
-    title: "Expert Team",
-    description: "Skilled professionals with years of experience in cutting-edge technologies",
-    icon: "👥"
+    title: "Fast Delivery",
+    description: "Most projects delivered in 2-4 weeks without compromising quality",
+    icon: Truck
   },
   {
-    title: "Agile Process",
-    description: "Flexible development methodology that adapts to your changing needs",
-    icon: "⚡"
+    title: "User-Focused",
+    description: "Every decision backed by research and real user data",
+    icon: User
   },
   {
-    title: "Quality Assurance",
-    description: "Rigorous testing and quality control throughout the development process",
-    icon: "✅"
+    title: "Modern Stack",
+    description: "Latest technologies and best practices for future-proof solutions",
+    icon: Layers
   },
   {
-    title: "24/7 Support",
-    description: "Round-the-clock technical support and maintenance services",
-    icon: "🛠️"
+    title: "Transparent Process",
+    description: "Regular updates, clear communication, no surprises",
+    icon: Home
   },
   {
-    title: "Scalable Solutions",
-    description: "Future-proof architecture that grows with your business",
-    icon: "📈"
+    title: "Flexible Pricing",
+    description: "Fixed-price projects or flexible retainers. Whatever works for you",
+    icon: Tag
   },
   {
-    title: "Cost Effective",
-    description: "Competitive pricing without compromising on quality or delivery",
-    icon: "💰"
+    title: "Ongoing Support",
+    description: "We stick around after launch to ensure continued success",
+    icon: Headphones
   }
 ];
 
 export default function ServicesWhyChooseUs() {
   return (
-    <section className="w-full py-16 md:py-24 bg-black text-white">
-      <div className="max-w-7xl mw-1360 px-6 sm:px-6 lg:px-8">
-        <div className="text-center mb-12 md:mb-16">
+    <section className="w-full  via-gray-900 to-black text-white relative overflow-hidden" style={{ width: '1920px', height: '914px' }}>
+      {/* Background overlay */}
+      <div className="absolute inset-0 bg-black/40"></div>
+      
+      <div className="relative mx-auto px-20 h-full flex flex-col justify-center" style={{ maxWidth: '1360px' }}>
+        <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
-            WHY CHOOSE US?
+            Why Choose Us?
           </h2>
           <p className="text-gray-300 text-lg max-w-3xl mx-auto">
-            We combine technical expertise with business acumen to deliver exceptional results.
+            A streamlined, transparent, and collaborative workflow built
+            <br /> for quality and speed.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-          {benefits.map((benefit, index) => (
-            <div key={index} className="group relative bg-gradient-to-br from-gray-900/50 to-black/50 border border-white/10 rounded-2xl p-6 md:p-8 hover:border-white/30 transition-all duration-300 backdrop-blur-sm">
-              <div className="text-4xl mb-4">
-                {benefit.icon}
+        <div className="grid grid-cols-3 gap-4">
+          {benefits.map((benefit, index) => {
+            const IconComponent = benefit.icon;
+            const isFirstTypeCard = index === 0 || index === 2 || index === 4; // Cards 1, 3, 5
+            const isSecondTypeCard = index === 1 || index === 3 || index === 5; // Cards 2, 4, 6
+            
+            return (
+              <div 
+                key={index} 
+                className={`group relative rounded-2xl hover:border-gray-600/50 transition-all duration-300 backdrop-blur-sm flex flex-col items-center text-center ${
+                  isFirstTypeCard 
+                    ? 'border border-gray-700/50' 
+                    : 'bg-gray-800/50 border border-gray-700/50'
+                }`}
+                style={isFirstTypeCard ? {
+                  width: '389px',
+                  height: '283px',
+                  paddingTop: '56px',
+                  paddingRight: '32px',
+                  paddingBottom: '56px',
+                  paddingLeft: '32px',
+                  borderRadius: '14px',
+                  background: '#2A2A2A'
+                } : isSecondTypeCard ? {
+                  width: '389px',
+                  height: '283px',
+                  paddingTop: '56px',
+                  paddingRight: '32px',
+                  paddingBottom: '56px',
+                  paddingLeft: '32px',
+                  borderRadius: '14px',
+                  background: '#151515',
+                  gap: '16px'
+                } : {
+                  padding: '24px'
+                }}
+              >
+                <div className="mb-6">
+                  <IconComponent className="w-12 h-12 text-white" strokeWidth={1.5} />
+                </div>
+                <h3 className="text-xl font-bold mb-4 text-white">
+                  {benefit.title}
+                </h3>
+                <p className="text-gray-300 leading-relaxed text-sm">
+                  {benefit.description}
+                </p>
               </div>
-              <h3 className="text-xl md:text-2xl font-bold mb-3 text-white">
-                {benefit.title}
-              </h3>
-              <p className="text-gray-300 leading-relaxed">
-                {benefit.description}
-              </p>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>

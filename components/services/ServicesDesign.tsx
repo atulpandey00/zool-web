@@ -13,7 +13,7 @@ export default function ServicesDesign() {
           
           {/* Description */}
           <div className="w-[574px] h-[108px] flex flex-col gap-4 opacity-100">
-            <p className="text-white text-xl">
+            <p className="text-white text-l">
               We create stunning, user-centered designs that not only look great
               <br />
               but drive real business results.
@@ -30,8 +30,8 @@ export default function ServicesDesign() {
             <div className="flex flex-col gap-4">
               {/* First row - single tag */}
               <div className="flex">
-                <div className="w-[310px] h-[37px] bg-white/20 text-black opacity-100 rounded-lg px-3 py-1.5 flex items-center justify-start backdrop-blur-sm" style={{ backdropFilter: 'blur(4px)', gap: '10px' }}>
-                  <span className="opacity-100 text-white text-lg leading-[140%] tracking-normal font-normal" style={{ fontFamily: 'Manrope' }}>
+                <div className="w-[350px] h-[37px] bg-white/20 text-black opacity-100 rounded-lg px-3 py-1.5 flex items-start justify-start backdrop-blur-sm" style={{ backdropFilter: 'blur(4px)', gap: '10px' }}>
+                  <span className="opacity-100 text-white text-lg leading-[140%] tracking-normal font-normal" >
                     UX Research & User Journey Mapping
                   </span>
                 </div>
@@ -39,13 +39,13 @@ export default function ServicesDesign() {
               
               {/* Second row - two tags */}
               <div className="flex gap-2">
-                <div className="w-[310px] h-[37px] bg-white/20 text-black opacity-100 rounded-lg px-3 py-1.5 flex items-center justify-center backdrop-blur-sm" style={{ backdropFilter: 'blur(4px)', gap: '10px' }}>
-                  <span className="opacity-100 text-white text-lg leading-[140%] tracking-normal font-normal" style={{ fontFamily: 'Manrope' }}>
+                <div className="w-[350px] h-[37px] bg-white/20 text-black opacity-100 rounded-lg px-3 py-1.5 flex items-start justify-center backdrop-blur-sm" style={{ backdropFilter: 'blur(4px)', gap: '10px' }}>
+                  <span className="opacity-100 text-white text-lg leading-[140%] tracking-normal font-normal" >
                     UI Design & High-Fidelity Prototypes
                   </span>
                 </div>
-                <div className="w-[300px] h-[37px] bg-white/20 text-black opacity-100 rounded-lg px-3 py-1.5 flex items-center justify-center backdrop-blur-sm" style={{ backdropFilter: 'blur(4px)', gap: '10px' }}>
-                  <span className="opacity-100 text-white text-lg leading-[140%] tracking-normal font-normal" style={{ fontFamily: 'Manrope' }}>
+                <div className="w-[350px] h-[37px] bg-white/20 text-black opacity-100 rounded-lg px-3 py-1.5 flex items-start justify-center backdrop-blur-sm" style={{ backdropFilter: 'blur(4px)', gap: '10px' }}>
+                  <span className="opacity-100 text-white text-lg leading-[140%] tracking-normal font-normal" >
                     Mobile App & Web Interface Design
                   </span>
                 </div>
@@ -53,8 +53,8 @@ export default function ServicesDesign() {
               
               {/* Third row - single tag */}
               <div className="flex">
-                <div className="w-[360px] h-[37px] bg-white/20 text-black opacity-100 rounded-lg px-3 py-1.5 flex items-center justify-center backdrop-blur-sm" style={{ backdropFilter: 'blur(4px)', gap: '10px' }}>
-                  <span className="opacity-100 text-white text-lg leading-[140%] tracking-normal font-normal" style={{ fontFamily: 'Manrope' }}>
+                <div className="w-[380px] h-[37px] bg-white/20 text-black opacity-100 rounded-lg px-3 py-1.5 flex items-start justify-center backdrop-blur-sm" style={{ backdropFilter: 'blur(4px)', gap: '10px' }}>
+                  <span className="opacity-100 text-white text-lg leading-[140%] tracking-normal font-normal" >
                     Wireframes, Design Systems & Style Guides
                   </span>
                 </div>
@@ -62,13 +62,13 @@ export default function ServicesDesign() {
               
               {/* Fourth row - two tags */}
               <div className="flex gap-2">
-                <div className="w-[300px] h-[37px] bg-white/20 text-black opacity-100 rounded-lg px-3 py-1.5 flex items-center justify-center backdrop-blur-sm" style={{ backdropFilter: 'blur(4px)', gap: '10px' }}>
-                  <span className="opacity-100 text-white text-lg leading-[140%] tracking-normal font-normal" style={{ fontFamily: 'Manrope' }}>
+                <div className="w-[320px] h-[37px] bg-white/20 text-black opacity-100 rounded-lg px-3 py-1.5 flex items-start justify-center backdrop-blur-sm" style={{ backdropFilter: 'blur(4px)', gap: '10px' }}>
+                  <span className="opacity-100 text-white text-lg leading-[140%] tracking-normal font-normal" >
                     Branding Elements & Visual Identity
                   </span>
                 </div>
-                <div className="w-[270px] h-[37px] bg-white/20 text-black opacity-100 rounded-lg px-3 py-1.5 flex items-center justify-center backdrop-blur-sm" style={{ backdropFilter: 'blur(4px)', gap: '10px' }}>
-                  <span className="opacity-100 text-white text-lg leading-[140%] tracking-normal font-normal" style={{ fontFamily: 'Manrope' }}>
+                <div className="w-[290px] h-[37px] bg-white/20 text-black opacity-100 rounded-lg px-3 py-1.5 flex items-start justify-center backdrop-blur-sm" style={{ backdropFilter: 'blur(4px)', gap: '10px' }}>
+                  <span className="opacity-100 text-white text-lg leading-[140%] tracking-normal font-normal" >
                     Usability Testing & Design Audit
                   </span>
                 </div>

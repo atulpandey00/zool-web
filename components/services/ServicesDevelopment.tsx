@@ -2,53 +2,41 @@
 
 export default function ServicesDevelopment() {
   return (
-    <section 
-      className="bg-black text-white opacity-100" 
-      style={{
-        width: '1920px',
-        height: '678.0001220703125px',
-        paddingTop: '80px',
-        paddingRight: '280px',
-        paddingBottom: '80px',
-        paddingLeft: '280px',
-        gap: '80px'
-      }}
-    >
+    <section className="w-[1920px] h-[678px] bg-black text-white opacity-100 pt-20 pr-[280px] pb-20 pl-[280px] mx-auto">
       <div className="flex gap-20 h-full">
-        {/* Left Side - Image/Visual Content */}
+        {/* Left Side - Video Content */}
         <div className="flex-1 flex items-center justify-center">
-          <div className="relative w-full h-[400px] md:h-[500px] rounded-2xl overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-br from-orange-600 via-red-700 to-black opacity-80"></div>
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="relative">
-                <div className="w-24 h-24 md:w-32 md:h-32 bg-white/10 rounded-lg backdrop-blur-sm border border-white/20 flex items-center justify-center mb-4">
-                  <div className="text-2xl md:text-3xl">💻</div>
-                </div>
-                <div className="w-20 h-20 md:w-24 md:h-24 bg-white/10 rounded-lg backdrop-blur-sm border border-white/20 flex items-center justify-center ml-8">
-                  <div className="text-xl md:text-2xl">📱</div>
-                </div>
-              </div>
-            </div>
+          <div className="w-full h-[450px] rounded-2xl overflow-hidden relative">
+            <video 
+              className="w-full h-full object-cover rounded-2xl scale-110"
+              autoPlay
+              muted
+              loop
+              playsInline
+            >
+              <source src="/videos/Development_Video.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+            {/* Gradient Overlay - Note: Complex gradients still need inline styles */}
+            <div 
+              className="absolute inset-0 rounded-2xl pointer-events-none"
+              style={{
+                background: `linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 28.35%, rgba(0, 0, 0, 0) 77.24%, #000000 100%), linear-gradient(90deg, #000000 0%, rgba(0, 0, 0, 0) 24.04%, rgba(0, 0, 0, 0) 69.71%, #000000 100%)`
+              }}
+            />
           </div>
         </div>
 
         {/* Right Side - Content */}
-        <div 
-          className="flex flex-col opacity-100"
-          style={{
-            width: '650px',
-            height: '518.0001220703125px',
-            gap: '56px'
-          }}
-        >
+        <div className="w-[650px] h-[518px] flex flex-col  opacity-100">
           {/* Title */}
           <h2 className="text-4xl font-bold text-white">
             DEVELOPMENT
           </h2>
           
           {/* Description */}
-          <div className="w-[574px] h-[108px] flex flex-col gap-4 opacity-100">
-            <p className="text-white text-xl">
+          <div className="w-[574px] h-[108px] flex flex-col gap-4 mt-4 opacity-100">
+            <p className="text-white text-l">
               High-performance web and mobile applications, built for growth.
               <br />
               We use cutting-edge technologies and best practices.
@@ -63,33 +51,33 @@ export default function ServicesDevelopment() {
             
             {/* Service Tags - Vertical Single Column */}
             <div className="flex flex-col gap-4">
-              <div className="w-[500px] h-[37px] bg-white/20 text-black opacity-100 rounded-lg px-3 py-1.5 flex items-center justify-start backdrop-blur-sm" style={{ backdropFilter: 'blur(4px)', gap: '10px' }}>
-                <span className="opacity-100 text-white text-lg leading-[140%] tracking-normal font-normal" style={{ fontFamily: 'Manrope' }}>
+              <div className="w-[380px] h-[37px] bg-white/20 opacity-100 rounded-lg px-3 py-1.5 flex items-center justify-start backdrop-blur-sm gap-2.5">
+                <span className="opacity-100 text-white text-lg leading-[140%] tracking-normal font-normal font-manrope">
                   Frontend Development (React, Next.js, Vue)
                 </span>
               </div>
-              <div className="w-[600px] h-[37px] bg-white/20 text-black opacity-100 rounded-lg px-3 py-1.5 flex items-center justify-start backdrop-blur-sm" style={{ backdropFilter: 'blur(4px)', gap: '10px' }}>
-                <span className="opacity-100 text-white text-lg leading-[140%] tracking-normal font-normal" style={{ fontFamily: 'Manrope' }}>
+              <div className="w-[520px] h-[37px] bg-white/20 opacity-100 rounded-lg px-3 py-1.5 flex items-center justify-start backdrop-blur-sm gap-2.5">
+                <span className="opacity-100 text-white text-lg leading-[140%] tracking-normal font-normal font-manrope">
                   Mobile App Development (iOS, Android, Flutter, React Native)
                 </span>
               </div>
-              <div className="w-[450px] h-[37px] bg-white/20 text-black opacity-100 rounded-lg px-3 py-1.5 flex items-center justify-start backdrop-blur-sm" style={{ backdropFilter: 'blur(4px)', gap: '10px' }}>
-                <span className="opacity-100 text-white text-lg leading-[140%] tracking-normal font-normal" style={{ fontFamily: 'Manrope' }}>
+              <div className="w-[360px] h-[37px] bg-white/20 opacity-100 rounded-lg px-3 py-1.5 flex items-center justify-start backdrop-blur-sm gap-2.5">
+                <span className="opacity-100 text-white text-lg leading-[140%] tracking-normal font-normal font-manrope">
                   Backend Development & API Engineering
                 </span>
               </div>
-              <div className="w-[420px] h-[37px] bg-white/20 text-black opacity-100 rounded-lg px-3 py-1.5 flex items-center justify-start backdrop-blur-sm" style={{ backdropFilter: 'blur(4px)', gap: '10px' }}>
-                <span className="opacity-100 text-white text-lg leading-[140%] tracking-normal font-normal" style={{ fontFamily: 'Manrope' }}>
+              <div className="w-[330px] h-[37px] bg-white/20 opacity-100 rounded-lg px-3 py-1.5 flex items-center justify-start backdrop-blur-sm gap-2.5">
+                <span className="opacity-100 text-white text-lg leading-[140%] tracking-normal font-normal font-manrope">
                   Database Architecture & Cloud Setup
                 </span>
               </div>
-              <div className="w-[480px] h-[37px] bg-white/20 text-black opacity-100 rounded-lg px-3 py-1.5 flex items-center justify-start backdrop-blur-sm" style={{ backdropFilter: 'blur(4px)', gap: '10px' }}>
-                <span className="opacity-100 text-white text-lg leading-[140%] tracking-normal font-normal" style={{ fontFamily: 'Manrope' }}>
+              <div className="w-[350px] h-[37px] bg-white/20 opacity-100 rounded-lg px-3 py-1.5 flex items-center justify-start backdrop-blur-sm gap-2.5">
+                <span className="opacity-100 text-white text-lg leading-[140%] tracking-normal font-normal font-manrope">
                   Integrations, Automation & Optimization
                 </span>
               </div>
-              <div className="w-[520px] h-[37px] bg-white/20 text-black opacity-100 rounded-lg px-3 py-1.5 flex items-center justify-start backdrop-blur-sm" style={{ backdropFilter: 'blur(4px)', gap: '10px' }}>
-                <span className="opacity-100 text-white text-lg leading-[140%] tracking-normal font-normal" style={{ fontFamily: 'Manrope' }}>
+              <div className="w-[410px] h-[37px] bg-white/20 opacity-100 rounded-lg px-3 py-1.5 flex items-center justify-start backdrop-blur-sm gap-2.5">
+                <span className="opacity-100 text-white text-lg leading-[140%] tracking-normal font-normal font-manrope">
                   QA Testing, Code Review & Performance Checks
                 </span>
               </div>

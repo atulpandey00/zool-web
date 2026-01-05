@@ -2,7 +2,7 @@
 
 export default function ServicesHero() {
   return (
-    <section className="w-full max-w-[1920px] h-[214px] mw-1360 pt-20 px-[280px] bg-black text-white flex items-center justify-center opacity-100">
+    <section className="w-full max-w-[1920px] h-[214px] max-auto pt-20 px-[280px] bg-black text-white flex items-center justify-center opacity-100">
       <div className="text-center flex flex-col items-center justify-center gap-4 w-full opacity-100">
         <h1 className="text-4xl md:text-2xl lg:text-5xl pt-20 font-bold tracking-wide whitespace-nowrap">
           OUR SERVICES
